@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>/* Header styling */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    /* Logo text */
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards; /* runs once */
+    }
+    
+    .logo-text span {
+      color: #ff4d4d;
+      opacity: 0;
+      display: inline-block;
+      animation: popIn 1s ease forwards;
+      animation-delay: 1s; /* starts after main text */
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    </style>
+ </head>
+ <body>
+  <header class="header">
+    <div class="logo">
+      <h1 class="logo-text">
+        DISCOUNT <span>Emporium</span>
+      </h1>
+    </div>
+  </header>
+  
+ </body>
+ 
+ </html>
